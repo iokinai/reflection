@@ -21,9 +21,11 @@ pub fn call_function(_attr: TokenStream, item: TokenStream) -> TokenStream {
                     let typ = &*pat.ty;
                     if let Type::Reference(TypeReference { elem, .. }) = typ {
                         Some(quote! {
-                            let #var_name = args.get(#i)
-                                .map(|arg| arg.downcast_ref::<#elem>())
-                                .expect("Invalid argument type");
+                            // let #var_name = args.get(#i)
+                            //     .map(|arg| arg.downcast_ref::<#elem>())
+                            //     .expect("Invalid argument type");
+
+                            let #var_name = args[#i].downcast_ref::<#elem>().expect("Invalid argument type");
                         })
                     } else {
                         Some(quote! {

@@ -32,6 +32,8 @@ fn main() {
 
 ## RESTRICTIONS: WORKS ONLY FOR STATIC VARIABLES, FOR NOW ONLY FOR NON-STATIC METHODS AND ONLY WITH METHODS INSIDE THE DECORATED WITH `#[call_function]` IMPL BLOCK
 
+Note: for ref arguments, pass the value without `&`
+
 In order to call a method in runtime by name, add the `#[call_function]` macro to an `impl` block. (Note: to an `IMPL` block, not the struct itself), and then use `call!` macro to call a function:
 
 ```rust 
