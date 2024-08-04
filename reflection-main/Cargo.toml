@@ -1,0 +1,10 @@
+[package]
+name = "reflection"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reflection-type = { path = "../codegen/reflection-type" }
+reflection-types = { path = "../reflection-types" }
+reflection-call = { path = "../codegen/reflection-call" }
+reflection-call-impl = { path = "../codegen/reflection-call-impl" }

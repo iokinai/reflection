@@ -1,0 +1,7 @@
+[workspace]
+members = [ 
+    "codegen/reflection-type",
+    "reflection-main",
+    "reflection-types",
+    "codegen/reflection-type", "examples/test-01", "codegen/reflection-call", "codegen/reflection-call-impl",
+]
