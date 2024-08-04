@@ -44,17 +44,6 @@ pub fn call_function(_attr: TokenStream, item: TokenStream) -> TokenStream {
             } else {
                 Vec::new()
             };
-
-            // if m.sig.inputs.len() >= 2 {
-
-            //     let call_args = (0..m.sig.inputs.len()-1).filter_map(|i| {
-            //         let var_name = Ident::new(&format!("arg{}", i), m.sig.ident.span());
-            //         Some(quote! { #var_name })
-            //     });
-
-            // } else {
-                
-            // }
             
 
             Some(quote! {
